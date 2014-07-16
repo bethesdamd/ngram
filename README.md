@@ -1,4 +1,6 @@
 ngram
 =====
 
-Simple approach to creating ngrams in Ruby
+Simple approach to creating ngrams in Ruby.
+
+test
