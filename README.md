@@ -9,7 +9,7 @@ Instructions
 
 Fun with N-Grams
 
-Please complete the following and return it to Abe Abrams at abe.abrams@thedarkstargroup.com.
+Please complete the following and return it to xxx.
 
 1) Your team has been tasked with building a custom software system that does classification of textual documents, and you’ve been instructed to not use any COTS packages, nor any special text processing or NLP libraries (i.e. write the code from scratch).  As a first step in the process, your Project Manager asks you to create a piece of code that identifies all the unique words and phrases up to length M in a single unstructured textual document (these words and phrases are called “n-grams” - see http://en.wikipedia.org/wiki/N-gram for more information on n-grams if you are curious), counts their frequency, and outputs the results.
 
