@@ -6,6 +6,7 @@
 # Variable 'max' specifies largest n-gram size, e.g. specifying max = 3 means create 1, 2 and 3-grams
 # Assumptions:  
 # 	- The documents are not enormous (but they certainly could be hundreds of pages.)
+# General approach: use Ruby split method to tokenize the document on white space.  This is fast, reliable, and keeps the code tight.  These word tokens are put in a list.  From this list we then extract the n-grams.  Lists are easy to work with and this creates a good separation of concerns: we aren't mixing tokenizing code with ngram extraction code.  The ngram code is a series of nested loops.  This is the only part of the code that requires another developer to pay attention, but it's clean, tight and rational and the design pattern works and shouldn't ever need tinkering.
 
 # Maximum number of n-grams to create
 max = 3
