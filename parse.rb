@@ -14,6 +14,8 @@ max = 3
 s = "one two three, four five."
 
 # Store stop words in a hash, which has very high-speed lookup
+# These would be read in from a file and stored in the hash with something like:
+# File.open("stop.txt").each do |v| stop[v.strip] = 1 end
 stop = {'a' => 0, 
 		'an' => 0,
 		'the' => 0,
