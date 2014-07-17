@@ -1,5 +1,5 @@
-# Comments
-## Enterprise Solution
+## Comments
+### Enterprise Solution
 
 To make a robust and scalable enterprise n-gram extraction system I would likely use Hadoop. This is a mature distributed framework that can scale horizontally with commodity hardware.
 
@@ -11,7 +11,7 @@ All this assumes some kind of sensible ETL workflow that can manage incoming doc
 
 This is a batch approach.  A more elegant streaming approach (or the batch approach) could be implemented using Apache Spark.
 
-## Example output
+### Example output
 
 	By Size:
 	one 1
