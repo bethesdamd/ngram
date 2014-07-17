@@ -19,12 +19,17 @@ s.split().each do |t|
 	f.push(t.strip)
 end
 
-out = []
-(1..max).each do |ng|
-	(0..f.size-1-ng).each do |n|
-		ng = Ngram.new("testing", 1)
-		out.push ng
+arr_ngram_objects = []
+(1..max).each do |ngsize|  # for each n-gram size, e.g. the 1-grams, 2-grams and 3-grams
+	(0..f.size-ngsize).each do |term|  # for each term in the list  0-4
+		temp = []
+		(0..ngsize-1).each do |word|   # 0-3
+			temp.push(f[term + word])
+		end
+		puts "ngram: " + temp.inspect
+		ngram_obj = Ngram.new(temp.join(" "), ngsize)
+		arr_ngram_objects.push ngram_obj
 	end
 end
 
-puts out.inspect
+puts arr_ngram_objects.inspect
