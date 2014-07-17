@@ -1,15 +1,22 @@
-#  parse.rb
+# parse.rb
+# Author: David Swearingen
+# Date: July 16 2014
+#
 # Parses n-grams from a document, contained in String
 # Variable 'max' specifies largest n-gram size, e.g. specifying max = 3 means create 1, 2 and 3-grams
 # Assumptions:  
 # 	- The documents are not enormous (but they certainly could be hundreds of pages.)
 
+# Maximum number of n-grams to create
 max = 3
 
 # The document is stored in String s
 s = "one two three four five"
 
 # Ngram class holds the ngram text in String @text, and the size of the ngram in @size
+# Creating a class is perhaps a little overkill for a simple program, but it's good programming practice
+# and it keeps some of the later code easier to read; plus it makes it very easy to add
+# new features later that may not be anticipated now.
 class Ngram
 	def initialize(text, size)
 		@text = text
@@ -39,11 +46,17 @@ arr_ngram_objects = []
 	end
 end
 
-arr_ngram_objects.sort! { |a,b| a.size <=> b.size }
-arr_ngram_objects.each do |n| puts n.text + " " + n.size.to_s end
+def print arr
+	arr.each do |n| puts n.text + " " + n.size.to_s end
+end
 
+puts "By Size:"
+arr_ngram_objects.sort! { |a,b| a.size <=> b.size }
+print(arr_ngram_objects)
+
+puts "\nAlphabetically:"
 arr_ngram_objects.sort! { |a,b| a.text <=> b.text }
-arr_ngram_objects.each do |n| puts n.text + " " + n.size.to_s end
+print(arr_ngram_objects)
 
 
 
