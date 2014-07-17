@@ -2,7 +2,7 @@
 # Author: David Swearingen
 # Date: July 16 2014
 #
-# Parses n-grams from a document, contained in String
+# Parses n-grams from a document, contained in String.  Removes punctuation.
 # Variable 'max' specifies largest n-gram size, e.g. specifying max = 3 means create 1, 2 and 3-grams
 # Assumptions:  
 # 	- The documents are not enormous (but they certainly could be hundreds of pages.)
