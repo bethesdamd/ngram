@@ -13,8 +13,8 @@ max = 3
 # The document is stored in String s
 s = "one two three, four five."
 
-# Store noise words in a hash, which has very high-speed lookup
-noise = {'a' => 0, 
+# Store stop words in a hash, which has very high-speed lookup
+stop = {'a' => 0, 
 		'an' => 0,
 		'the' => 0,
 		'of' => 0
@@ -36,7 +36,7 @@ f = []
 # Split the document on white space.  Clean up the terms. Then create an array containing every word in the document.
 s.split().each do |t|   
 	t.gsub!(/[^a-zA-Z ]/,'')  # remove punctuation
-	next if noise.has_key? t  #  Skip adding this if it's a noise word
+	next if stop.has_key? t  #  Skip adding this if it's a stop word
 	f.push(t.strip)
 end
 
