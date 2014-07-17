@@ -10,5 +10,34 @@ All this assumes some kind of sensible ETL workflow that can manage incoming doc
 
 This is a batch approach.  A more elegant streaming approach (or the batch approach) could be implemented using Apache Spark.
 
+# Example output
+
+	By Size:
+	one 1
+	two 1
+	three 1
+	four 1
+	five 1
+	one two 2
+	four five 2
+	three four 2
+	two three 2
+	one two three 3
+	two three four 3
+	three four five 3
+
+	Alphabetically:
+	five 1
+	four 1
+	four five 2
+	one 1
+	one two 2
+	one two three 3
+	three 1
+	three four 2
+	three four five 3
+	two 1
+	two three 2
+	two three four 3
 
 
