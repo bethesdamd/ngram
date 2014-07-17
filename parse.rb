@@ -11,7 +11,14 @@
 max = 3
 
 # The document is stored in String s
-s = "one two three four five"
+s = "one two three, four five."
+
+# Store noise words in a hash, which has very high-speed lookup
+noise = {'a' => 0, 
+		'an' => 0,
+		'the' => 0,
+		'of' => 0
+		}
 
 # Ngram class holds the ngram text in String @text, and the size of the ngram in @size
 # Creating a class is perhaps a little overkill for a simple program, but it's good programming practice
@@ -28,8 +35,8 @@ end
 f = []
 # Split the document on white space.  Clean up the terms. Then create an array containing every word in the document.
 s.split().each do |t|   
-	# remove punctuation
-	# remove noise words
+	t.gsub!(/[^a-zA-Z ]/,'')  # remove punctuation
+	next if noise.has_key? t  #  Skip adding this if it's a noise word
 	f.push(t.strip)
 end
 
