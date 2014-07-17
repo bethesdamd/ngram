@@ -9,7 +9,7 @@ In order to distribute the processing load, incoming documents could be sent to 
 
 All this assumes some kind of sensible ETL workflow that can manage incoming documents and puts completed document n-gram results in separate HDFS folders. 
 
-This is a batch approach.  A more elegant streaming approach (or the batch approach) could be implemented using Apache Spark.
+This is a batch approach.  A more elegant streaming approach (or the batch approach) could be implemented using Apache Spark, along with a distributed, resilient message queue like Kafka.
 
 ### Example output
 
