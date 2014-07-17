@@ -11,3 +11,4 @@ All this assumes some kind of sensible ETL workflow that can manage incoming doc
 This is a batch approach.  A more elegant streaming approach (or the batch approach) could be implemented using Apache Spark.
 
 
+
